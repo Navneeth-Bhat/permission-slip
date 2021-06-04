@@ -1,0 +1,72 @@
+html{
+    font-size: 62.5%;
+    /* padding and border is included in element size */
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Layout */
+.grid-container{
+    /* responsive flexible display setting for css  allowing easier design without floar and positioning*/
+    display: grid;
+/* create multiple areas for the grid that you will use later */
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    /* fr=1 fraction of available */
+    /* column specifies number of columns in the grid and their width. we have 1 column of size 1 fr */
+    grid-template-columns:1fr ;
+    /* 3rows  */
+grid-template-rows: 5rem 1fr 5rem;
+height: 100%;
+}
+header{
+    /* connecting to previously declared grid area header above is a placeholder for this*/
+    grid-area:header;
+    background-color: #202040;
+}
+main{
+    grid-area: main;
+    padding:1rem;
+}
+footer{
+    grid-area: footer;
+    background-color: #202040;
+    color:#ffffff;
+}
+/* Common classes */
+a{
+    /* remove underline */
+    text-decoration: none;
+}
+a:hover{
+    color:#ff8000;
+}
+header a{
+    color:#ffffff;
+    padding:1rem;
+}
+a.brand{
+    color:#ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.rows{
+    /* flex is used for responsiveness */
+    display: flex;
+    /* break flex item into multiple lines */
+    flex-wrap: wrap;
+    /* horizontal alignment */
+    justify-content:space-between ;
+    /* vertical alignment */
+    align-items: center;
+}
+/* apply rows class and then change justify content in footer to center in order to position footer and save code */
+.rows.center{
+    justify-content: center;
+}
