@@ -40,6 +40,14 @@ footer{
     color:#ffffff;
 }
 /* Common classes */
+h1{
+    font-size: 1.8rem;
+    padding:1rem 0;
+}
+h2{
+    font-size: 1.6rem;
+    padding:1rem 0;
+}
 a{
     /* remove underline */
     text-decoration: none;
@@ -57,9 +65,9 @@ a.brand{
     font-weight: bold;
 }
 .rows{
-    /* flex is used for responsiveness */
+    /* flex is used for responsiveness also to put them side by side instead of different lines */
     display: flex;
-    /* break flex item into multiple lines */
+    /* break flex item into multiple lines when minimized*/
     flex-wrap: wrap;
     /* horizontal alignment */
     justify-content:space-between ;
@@ -69,4 +77,26 @@ a.brand{
 /* apply rows class and then change justify content in footer to center in order to position footer and save code */
 .rows.center{
     justify-content: center;
+}
+.card{
+    border:0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    margin:1rem;
+}
+
+.card-body{
+    padding:1rem;
+}
+/* all children of card body */
+.card-body>*{
+    margin-bottom: 0.5rem;
+}
+
+.price{
+    font-size: 2rem;
+}
+.rating span{
+    color:gold;
+    margin:0.1rem;
 }
